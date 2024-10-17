@@ -20,7 +20,7 @@ Before you begin, ensure you have met the following requirements:
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/property-map-webapp.git
+   git clone https://github.com/drivenone/Property-Map-WebApp.git
    cd property-map-webapp
    ```
 
