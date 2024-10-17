@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- Bootstrap CSS for styling -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Table to display price history data -->
+        <table class="table table-striped table-hover">
+            <!-- Table header -->
+            <thread class="thead-dark">
+                <tr>
+                    <!-- Dynamically generate table headers from DataFrame columns -->
+                    {% for column in price_history_df.columns %}
+                    <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thread>
+            <!-- Table body -->
+            <tbody>
+                <!-- Iterate over DataFrame rows -->
+                {% for row in price_history_df.values %}
+                    <tr>
+                        <!-- Iterate over cells in each row -->
+                        {% for cell in row %}
+                            <td>{{ cell }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>
